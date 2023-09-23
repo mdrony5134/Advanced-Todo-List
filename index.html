@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+    <!-- main part start -->
+    <main>
+        <h1 class="title">MY TODO-LIST</h1>
+        <h3 class="sub_title">New Task Creation</h3>
+        <div class="separator"></div>
+
+        <!-- form start -->
+        <form id="form">
+            <div class="t_name">
+                <label for="name">Name :</label>
+                <input type="text" name="name" id="name" placeholder="Add new task">
+            </div>
+            <div class="t_priority">
+                <label for="priority">Priority :</label>
+                 <select name="priority" id="priority">
+                    <option disabled>Select one</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                 </select>
+            </div>
+            <div class="t_date">
+                <label for="date">Date :</label>
+                <input type="date" name="date" id="date">
+            </div>
+            <div class="t_submit">
+                <input type="submit" value="Add Now">
+            </div>
+        </form>
+        <!-- form end -->
+
+        <!-- task management start -->
+
+        <h3 class="sub_title">Task Management</h3>
+        <div class="separator"></div>
+
+        <div class="task_management">
+            <div class="search">
+                <label for="search">Search :</label>
+                <input type="text" id="search" placeholder="Search by name">
+            </div>
+            <div class="filter">
+                <label for="filter">Filter :</label>
+                <select name="filter" id="filter">
+                    <option value="all">All</option>
+                    <option value="complete">Complete</option>
+                    <option value="incomplete">Incomplete</option>
+                    <option value="today">Today</option>
+                    <option value="h_priority">High Priority</option>
+                    <option value="m_priority">Medium Priority</option>
+                    <option value="l_priority">Low Priority</option>
+                </select>
+            </div>
+            <div class="sort">
+                <label for="sort">Sort :</label>
+                <select name="sort" id="sort">
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            </div>
+            <div class="by_date">
+                <label for="date">By Date :</label>
+                <input type="date" id="date">
+            </div>
+        </div>
+
+        <!-- task management end -->
+
+        <!-- table start -->
+
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Task Name</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="t_body">
+                 
+            </tbody>
+        </table>
+
+        <!-- table end -->
+
+    </main>
+
+    <!-- main end -->
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
